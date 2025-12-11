@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lorrayne Ramos — Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#0f1720;
+      --muted:#9aa4b2;
+      --accent:#6EE7B7;
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+      --radius:14px;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:linear-gradient(180deg,var(--bg) 0%, #071018 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding-bottom:60px;
+    }
+    .container{max-width:var(--max-width);margin:40px auto;padding:24px}
+
+    /* Header */
+    header.top{
+      display:flex;align-items:center;justify-content:space-between;gap:20px;padding:28px;border-radius:16px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter:blur(6px);box-shadow:0 6px 30px rgba(2,6,23,0.6);
+    }
+    .brand{
+      display:flex;align-items:center;gap:16px
+    }
+    .logo{
+      width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3dd7f9);display:flex;align-items:center;justify-content:center;font-weight:800;color:#052;box-shadow:0 6px 24px rgba(15,125,95,0.12);font-size:20px
+    }
+    .title{line-height:1}
+    .title h1{margin:0;font-size:20px;font-weight:700}
+    .title p{margin:0;color:var(--muted);font-size:13px}
+
+    nav.nav{display:flex;gap:14px;align-items:center}
+    a.btn{
+      color:var(--accent);text-decoration:none;border:1px solid transparent;padding:8px 12px;border-radius:10px;font-weight:600;font-size:13px
+    }
+    a.btn.secondary{color:var(--muted);border:1px solid rgba(255,255,255,0.03)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px;align-items:center}
+    .hero-card{
+      background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02));padding:28px;border-radius:var(--radius);box-shadow:0 8px 40px rgba(2,6,23,0.6);
+      animation:fadeInUp .6s ease both;
+    }
+    .hero-card h2{margin:0 0 8px;font-size:26px}
+    .hero-card p{color:var(--muted);margin:0 0 16px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:var(--glass);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    .card-side{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:22px;border-radius:14px}
+    .photo{width:100%;height:220px;border-radius:10px;overflow:hidden;background-image:linear-gradient(135deg,#072a2e,#07203a);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.08);font-size:48px}
+    .contact{margin-top:12px;color:var(--muted);font-size:14px}
+
+    /* Projects grid */
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}
+    .project-card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid var(--glass-2);transition:transform .28s ease, box-shadow .28s ease;overflow:hidden
+    }
+    .project-card:hover{transform:translateY(-8px);box-shadow:0 18px 50px rgba(2,6,23,0.7)}
+    .project-card h3{margin:0 0 6px}
+    .project-card p{margin:0;color:var(--muted);font-size:14px}
+    .project-meta{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+    .pill{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;font-size:12px;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .projects{grid-template-columns:1fr}
+    }
+
+    /* animations */
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+    /* footer */
+    footer{margin-top:36px;text-align:center;color:var(--muted);font-size:13px;padding:18px}
+
+    /* small utilities */
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="top">
+      <div class="brand">
+        <div class="logo">LR</div>
+        <div class="title">
+          <h1>Lorrayne Ramos</h1>
+          <p>Desenvolvedora Multidisciplinar • Web • Mobile • Infra</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="btn" href="#projects">Projetos</a>
+        <a class="btn secondary" href="#about">Sobre</a>
+        <a class="btn secondary" href="#contact">Contato</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-card">
+          <h2>Olá — eu sou a Lorrayne</h2>
+          <p class="small">Desenvolvedora multidisciplinar: construo aplicações web e móveis, infra em nuvem e interfaces com foco em experiência. Gosto de soluções completas, do design à infraestrutura.</p>
+
+          <div style="margin-top:18px" class="tags">
+            <div class="tag">Web</div>
+            <div class="tag">Mobile</div>
+            <div class="tag">Frontend</div>
+            <div class="tag">Backend</div>
+            <div class="tag">Infra</div>
+            <div class="tag">UX</div>
+          </div>
+
+          <div style="margin-top:20px;display:flex;gap:12px">
+            <a class="btn" href="#projects">Ver projetos</a>
+            <a class="btn secondary" href="https://github.com/lorrayneramos" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <aside class="card-side">
+          <div class="photo">LR</div>
+          <div class="contact">
+            <div class="small">Email: <strong style="color:var(--accent)">seu-email@exemplo.com</strong></div>
+            <div class="small" style="margin-top:6px">Local: Brasil • Disponível para novos projetos</div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects" style="margin-top:28px">
+        <h2 style="margin:0 0 12px">Projetos Principais</h2>
+        <div class="projects">
+          <article class="project-card" tabindex="0">
+            <h3>Cãopanheirismo Solidário</h3>
+            <p>Plataforma aberta para conectar ONGs, abrigos e protetores com doadores, voluntários e campanhas de adoção.</p>
+            <div class="project-meta">
+              <span class="pill">Front / Backend</span>
+              <span class="pill">Acessibilidade</span>
+              <span class="pill">Responsivo</span>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0">
+            <h3>Senthora</h3>
+            <p>Plataforma de empatia digital com processamento de linguagem natural e mapas emocionais para apoio comunitário.</p>
+            <div class="project-meta">
+              <span class="pill">AI / PLN</span>
+              <span class="pill">Data Viz</span>
+              <span class="pill">UX</span>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0">
+            <h3>Developing Connections (CPaaS)</h3>
+            <p>Sistema com foco em navegação eficiente, integração e experiência do usuário. Front-end com Bootstrap e JS.</p>
+            <div class="project-meta">
+              <span class="pill">Front-end</span>
+              <span class="pill">Usabilidade</span>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0">
+            <h3>FinanceFlow (Mobile)</h3>
+            <p>App híbrido (Ionic + Angular) com dashboard, metas, transações, gráficos e assistente virtual.</p>
+            <div class="project-meta">
+              <span class="pill">Ionic</span>
+              <span class="pill">Chart.js</span>
+              <span class="pill">Firebase</span>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0">
+            <h3>FinanceFlow (Web + Infra)</h3>
+            <p>Versão web com PHP, MySQL e infraestrutura AWS (EC2, RDS, VPC), 2FA, deploy via GitHub Actions.</p>
+            <div class="project-meta">
+              <span class="pill">PHP</span>
+              <span class="pill">AWS</span>
+              <span class="pill">Security</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="about" style="margin-top:32px">
+        <h2>Sobre</h2>
+        <div style="background:var(--card);padding:18px;border-radius:12px;margin-top:12px;color:var(--muted)">
+          <p>Sou desenvolvedora multidisciplinar com foco em construir produtos que funcionam — do design e front-end até o backend e a infraestrutura. Trabalho com web e mobile, e busco sempre soluções práticas e elegantes para problemas reais.</p>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:32px">
+        <h2>Contato</h2>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px">
+          <div style="flex:1;min-width:260px;background:var(--card);padding:16px;border-radius:12px;color:var(--muted)">
+            <strong>Email</strong>
+            <div style="margin-top:8px">seu-email@exemplo.com</div>
+            <div style="margin-top:12px" class="small">GitHub: <a href="https://github.com/lorrayneramos" target="_blank" style="color:var(--accent);text-decoration:none">github.com/lorrayneramos</a></div>
+          </div>
+
+          <div style="flex:1;min-width:260px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:16px;border-radius:12px;color:var(--muted)">
+            <strong>Disponibilidade</strong>
+            <div style="margin-top:8px">Aberta para projetos e colaborações. Trabalho remoto e híbrido.</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © " + new Date().getFullYear() + " • Lorrayne Ramos — Desenvolvedora Multidisciplinar
+    </footer>
+  </div>
+</body>
+</html>
